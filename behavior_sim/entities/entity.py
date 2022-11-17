@@ -12,6 +12,11 @@ class TypedEntity(Entity):
     def __init__(self, type_id):
         self.type_id = type_id
 
+class SizedEntity(Entity):
+    
+    def __init__(self, size=.1):
+        self.size = size
+        
 class Movable2DEntity(Entity):
 
     def __init__(self, speed=0, dir=0, start_x=0, start_y=0):
@@ -25,6 +30,15 @@ class Movable2DEntity(Entity):
     def move(self):
         self.x += utilities.dec_round(self.speed*math.cos(self.dir))
         self.y += utilities.dec_round(self.speed*math.sin(self.dir))
+
+class CircleEntity(SizedEntity):
+
+    def __init__(self, radius=.1):
+        super().__init__(self, radius)
+
+    @property
+    def radius(self):
+        return self.size
 
 class TypedMovableEntity(TypedEntity, Movable2DEntity):
     
