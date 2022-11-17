@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "behavior_sim"
+version = "0.0.1"
+authors = [
+  { name="Patrick McQuay", email="patrick.mcquay@gmail.com" },
+]
+description = "Behavioral learning and simulation in Python"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/SnarkAttack/behavior_sim"
+"Bug Tracker" = "https://github.com/SnarkAttack/behavior_sim/issues"
